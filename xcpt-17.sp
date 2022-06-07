@@ -73,14 +73,7 @@ bool bGoodIP()
 		char ip[4][4];
 		ExplodeString(SERVERS[i], ".", ip, sizeof(ip), sizeof(ip[]));
 		if (StringToInt(ip[0]) == p[0] && StringToInt(ip[1]) == p[1] && StringToInt(ip[2]) == p[2] && StringToInt(ip[3]) == p[3])
-		{
-			PrintToServer("%s = true", SERVERS[i]);
 			return true;
-		}
-		else
-		{
-			PrintToServer("%s = false", SERVERS[i]);
-		}
 	}
 
 	return false;
